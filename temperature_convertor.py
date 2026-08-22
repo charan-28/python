@@ -1,0 +1,5 @@
+t=input("Enter temperature in Celsius: ")
+print(f"Temperature in Fahrenheit: {float(t)*9/5+32:.2f}")
+print(f"Temperature in Kelvin: {float(t)+273.15:.2f}")
+print(f"Temperature in Rankine: {float(t)*9/5+491.67:.2f}")
+print(f"Temperature in Reaumur: {float(t)*4/5:.2f}")
