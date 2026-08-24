@@ -22,4 +22,4 @@ print(dc)'''
 x,y=map(int,input("Enter the numbers: ").split())
 nums=list(range(0,2001,2))
 n=sum(nums[x:y+1])
-print(n)
+print(f"Result: {n:.2f}")
