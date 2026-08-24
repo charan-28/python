@@ -41,7 +41,6 @@ class Student:
 
 
 class StudentManagementSystem:
-
     def __init__(self):
         self.students = {}
 
@@ -281,3 +280,4 @@ system.load_data()
 
 # Start application
 system.menu()
+
