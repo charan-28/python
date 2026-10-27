@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 '''
 arr=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9],[8,6,6]])
 print("Original array:\n", arr)
@@ -53,7 +54,7 @@ print(np.eye(3))  # Identity matrix
 print(np.identity(4))  # Identity matrix
 print(c.itemsize)  # Size of each element in bytes
 print(arr.astype(np.float32))  # Change the data type of the array
-print(arr.astype())'''
+print(arr.astype())
 
 arr1=np.arange(1,13).reshape(3,4)
 arr2=np.arange(13,25).reshape(3,4)
@@ -82,3 +83,65 @@ print(np.min(arr3,axis=0))  # Minimum along the specified axis=0 for column-wise
 print(arr1)
 print(arr3)
 print(np.dot(arr1,arr3))  # Dot product of two arrays 
+print(arr1)
+print(arr1[::2,1::2])
+print(arr1[1,::3])
+print(arr1[0:2,1:])
+
+arr=np.arange(0,27).reshape(3,3,3)
+print(arr)
+print(arr[0::2,0:,0:])
+print(arr[0,1:2])
+print("1block middle coloumn",arr[1,:,1])
+print(arr[2,1:,1:])
+print(arr[0::2,0,0::2])
+
+arr=np.random.randint(1,100,24).reshape(6,4)
+print(arr)
+print(arr>40)
+print(arr[arr>35])
+a = np.arange(24).reshape(6,4)
+print(a)
+#print(a[1:3,1:3])
+print(a[[1,2],[0,2]])
+
+arr=np.array([1,2,3,np.nan,5,6,np.nan])
+print(arr)
+
+print(arr[~np.isnan(arr)])
+
+x=np.linspace(-10,10,100)
+y=x**2
+plt.plot(x,y)
+plt.show()
+
+a=np.linspace(1,10,20)
+b=np.sin(a)
+plt.plot(a,b)   
+plt.title("Sine Wave")
+plt.xlabel("X-axis")    
+plt.ylabel("Y-axis")
+plt.show()  
+
+x=np.linspace(-10,10,100)
+y=x*np.log(x)
+print(y)
+plt.plot(x,y)
+plt.show()
+
+arr=np.random.randint(1,100,24).reshape(6,4)
+print(arr)
+print(np.sort(arr,axis=0)[::-1])  # Sort along the specified axis=0 for column-wise operation
+print(np.sort(arr,axis=1)[::-1])  # Sort along the specified axis=1 for row-wise operation
+
+a=np.arange(1,25).reshape(4,6)
+print(a)
+a=np.append(a,np.array([25,26,27,28,29,30]).reshape(1,6),axis=0)   # Append a new row to the array
+print("updated",np.sort(a))
+a=np.append(a,np.random.randint(1,100,10).reshape(5,2),axis=1)   # Append a new column to the array
+print("updated",np.sort(a))'''
+
+a=np.array([1,2,3,2,6,5,6,7])
+print(a)
+np.cumsum(a)  # Cumulative sum of the array 
+print(np.cumsum(a))
